@@ -50,9 +50,13 @@ body {
 }
 
 .text-bio {
-    text-align: justify;
+    text-align: center;
     font-style: italic;
-    line-height: 2;
+    line-height: 1;
+}
+
+.resaltar{
+    font-weight: bold;
 }
 
 /* Contacto */
