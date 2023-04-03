@@ -17,6 +17,10 @@ window.addEventListener('load', () => {
             document.querySelector('#user-telefono').innerHTML = telefono;
             document.querySelector('#user-message').innerHTML = message;
             document.querySelector('#ok').classList.add('show-ok');
+            document.querySelector('#name').value = '';
+            document.querySelector('#email').value = '';
+            document.querySelector('#telefono').value = '';
+            message = document.querySelector('#message').value = '';
         } else {
             // error
             document.querySelector('#user-name').innerHTML = '';
@@ -25,10 +29,6 @@ window.addEventListener('load', () => {
             document.querySelector('#user-message').innerHTML = '';
             document.querySelector('#error').classList.add('show-error');
         }
-        document.querySelector('#name').value = '';
-        document.querySelector('#email').value = '';
-        document.querySelector('#telefono').value = '';
-        message = document.querySelector('#message').value = '';
     });
 
     document.querySelector('#get-user')?.addEventListener('click', getUser);
