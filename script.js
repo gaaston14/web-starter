@@ -44,11 +44,16 @@ function getUser() {
             document.querySelector('#no-user').classList.remove('show-error');
             const userData = response.results[0].name;
             const userImg = response.results[0].picture.medium;
-            const imgElement = document.createElement('img');
-            console.log(userImg);
+            /*const imgElement = document.createElement('img');
+            console.log(userImg);*/
             document.querySelector('#user-name').innerHTML = `${userData.title}. ${userData.first} ${userData.last}`;
-            imgElement.src=userImg;
-            document.querySelector('#user-x').appendChild(imgElement);
+            /*imgElement.src=userImg;
+            document.querySelector('#user-x').appendChild(imgElement);*/
+            /*document.querySelector('#user-picture').innerHTML = userImg*/
+            
+            document.getElementById('user-picture').setAttribute("src" , userImg);
+            
+            document.querySelector('#user-picture').classList.add('img-load');
         })
         .catch((error) => {
             console.log('aja', error);

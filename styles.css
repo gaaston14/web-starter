@@ -108,7 +108,12 @@ h2 {
     margin: 0 auto;
 }
 
-.user-x{
+.img-inc{
+    display: none;
+    margin: 0 auto;
+}
+
+.img-load{
     display: block;
     margin: 0 auto;
 }
