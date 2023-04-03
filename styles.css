@@ -69,6 +69,7 @@ h2 {
     margin: 0.5rem 0;
 }
 
+
 .form-button {
     display: block;
 }
@@ -79,6 +80,15 @@ h2 {
 }
 
 .show-error {
+    display: block;
+}
+
+.ok{
+    color: green;
+    display: none;
+}
+
+.show-ok{
     display: block;
 }
 
@@ -97,3 +107,4 @@ h2 {
     text-align: center;
     margin: 0 auto;
 }
+
