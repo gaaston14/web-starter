@@ -40,9 +40,15 @@ function getUser() {
             return data.json();
         })
         .then((response) => {
+            
             document.querySelector('#no-user').classList.remove('show-error');
             const userData = response.results[0].name;
+            const userImg = response.results[0].picture.medium;
+            const imgElement = document.createElement('img');
+            console.log(userImg);
             document.querySelector('#user-name').innerHTML = `${userData.title}. ${userData.first} ${userData.last}`;
+            imgElement.src=userImg;
+            document.querySelector('#user-x').appendChild(imgElement);
         })
         .catch((error) => {
             console.log('aja', error);
