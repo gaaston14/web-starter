@@ -40,8 +40,13 @@ function getUser() {
             return data.json();
         })
         .then((response) => {
+            document.querySelector('#no-user').classList.remove('show-error');
             const userData = response.results[0].name;
             document.querySelector('#user-name').innerHTML = `${userData.title}. ${userData.first} ${userData.last}`;
         })
-        .catch((error) => console.log('aja', error));
+        .catch((error) => {
+            console.log('aja', error);
+            document.querySelector('#user-name').innerHTML = '';
+            document.querySelector('#no-user').classList.add('show-error');
+    });
 }
